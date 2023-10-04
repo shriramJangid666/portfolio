@@ -1,39 +1,58 @@
-*{
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "General Sans";
 }
-html,body{
+
+/* Set a base font size and line height */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Viewport settings */
+html, body {
     width: 100%;
     height: 100%;
 }
 
-.bounding{
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Bounding elements for text animation */
+.bounding {
     width: fit-content;
     overflow: hidden;
 }
 
-.boundingElem{
+.boundingElem {
     transform: translateY(100%);
 }
 
-#cursor{
+/* Cursor styles */
+#cursor {
     width: 10px;
     height: 10px;
-    background-color: #fff; 
+    background-color: #fff;
     position: absolute;
     z-index: 999;
     border-radius: 50%;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 
-#main{
+/* Main container */
+#main {
     width: 100%;
     background: black;
 }
 
-#hero{
+/* Hero section */
+#hero {
     position: relative;
     color: #fff;
     width: 100%;
@@ -41,7 +60,8 @@ html,body{
     background: black;
 }
 
-#nav{
+/* Navigation bar */
+#nav {
     width: 100%;
     padding: 20px 40px;
     color: #fff;
@@ -50,18 +70,18 @@ html,body{
     align-items: center;
 }
 
-#nav a{
+#nav a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
 }
 
-#heading{
+/* Heading styles */
+#heading {
     margin-top: 90px;
 }
 
-#heading h1{
-    /* font-family: "General Sans Medium"; */
+#heading h1 {
     line-height: 1;
     opacity: .6;
     font-size: 10vw;
@@ -70,24 +90,25 @@ html,body{
     font-weight: 900;
 }
 
-#heading #heading2{
+#heading #heading2 {
     margin-left: 230px;
 }
 
-.blocktext{
+.blocktext {
     width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: end;
 }
 
-.blocktext h5{
+.blocktext h5 {
     text-transform: uppercase;
     font-size: 15px;
     text-align: right;
 }
 
-#chotiheadings{
+/* Small headings */
+#chotiheadings {
     margin-top: 100px;
     padding-right: 50px;
     display: flex;
@@ -95,35 +116,36 @@ html,body{
     align-items: end;
 }
 
-#chotiheadings h5{
+#chotiheadings h5 {
     text-transform: uppercase;
     margin-top: .5vw;
     font-size: 1vw;
     text-align: right;
 }
 
-#herofooter{
+/* Hero footer */
+#herofooter {
     padding: 0 2vw;
     width: 100%;
     position: absolute;
-    bottom: 3%;
+    bottom: 1%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#herofooter a{
+#herofooter a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-#herofooter #iconset{
+#herofooter #iconset {
     display: flex;
     gap: 5px;
 }
 
-#herofooter .circle{
+#herofooter .circle {
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -133,17 +155,19 @@ html,body{
     align-items: center;
 }
 
-#second{
+/* Second section */
+#second {
     position: relative;
     color: #fff;
     padding-right: 10vw;
     background-color: black;
-    padding-top: 200px;
+    /* padding-top: 200px; */
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.porjecctZero{
+/* Project boxes */
+.porjecctZero {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,59 +176,59 @@ html,body{
     border-top: 1px solid #888;
 }
 
-.porjecctZero h1{
+.porjecctZero h1 {
     text-transform: uppercase;
     font-size: 3.2vw;
     opacity: 0.7;
 }
 
-.borderbottom{
+.borderbottom {
     border-bottom: 1px solid #888;
 }
 
-.porjecctZero img{
+.porjecctZero img {
     position: absolute;
     z-index: 11;
     height: 200px;
     opacity: 0;
 }
 
-#about{
-    width: 100vw;
-    height: 35vh;
-    border: 1px springgreen;
-    margin-top: 220px;
-    /* position: relative; */
+/* About section */
+#about {
+    width: 100%;
+    /* height: auto; */
+    /* margin-top: 220px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: black;
     color: #fff;
     gap: 50px;
-    padding: 10vh 30vh 10vh 70vh;
-    /* height: min-content; */
+    padding: 0vh 30vh 10vh 10vh;
+
 }
 
-#about img{
+#about img {
     width: 200px;
+    border-radius: 50%;
 }
 
-#aboutText{
-    width: 25rem;
+#aboutText {
+    width: 60%;
 }
 
-#aboutText h5{
+#aboutText h5 {
     text-transform: uppercase;
     opacity: 0.6;
     margin-bottom: 10px;
 }
 
-#aboutText p{
+#aboutText p {
     line-height: 1.7;
     margin-bottom: 30px;
 }
 
-#aboutText a{
+#aboutText a {
     text-decoration: none;
     color: white;
     border-radius: 100%;
@@ -213,25 +237,26 @@ html,body{
     font-size: 12px;
 }
 
-#sub{
-    height: 255px;
+/* Subscribe section */
+#sub {
     background: black;
     color: #fff;
     padding: 10vh 20vh;
 }
 
-#sub h5{
+#sub h5 {
     text-transform: uppercase;
     opacity: 0.6;
 }
 
-#sub h3{
+#sub h3 {
     text-transform: uppercase;
     font-size: 12px;
     margin-top: 10px;
 }
 
-#footer{
+/* Footer */
+#footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -240,12 +265,12 @@ html,body{
     color: #fff;
 }
 
-#footerLeft{
+#footerLeft {
     display: flex;
     gap: 30px;
 }
 
-#footer a{
+#footer a {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
@@ -257,7 +282,35 @@ html,body{
     gap: 30px;
 }
 
-#second a{
+#second a {
     color: #888;
     text-decoration: none;
+}
+
+/* Media queries for responsiveness */
+/* Small screens (up to 600px) */
+@media (max-width: 600px) {
+    #nav {
+        padding: 10px 20px;
+    }
+
+    #heading h1 {
+        font-size: 8vw;
+    }
+
+    #herofooter{
+        top: 70%;
+    }
+
+    /* Add other mobile-specific styles here */
+}
+
+/* Medium screens (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Add styles for medium-sized screens here */
+}
+
+/* Large screens (1025px and above) */
+@media (min-width: 1025px) {
+    /* Add styles for larger screens here */
 }
